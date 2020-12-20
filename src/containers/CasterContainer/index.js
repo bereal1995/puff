@@ -6,6 +6,7 @@ import Visual from "../../components/Main/Visual";
 import {useSelector} from "react-redux";
 import TabMenu from "../../components/Main/TabMenu";
 import Contents from "../../components/Main/Contents";
+import {Caster} from "../../CopyRight/Caster/Copy";
 
 function CasterContainer(props) {
 
@@ -13,34 +14,32 @@ function CasterContainer(props) {
 
     } = props;
 
-    const caster = useSelector(state => state.caster);
-
   return (
       <Container>
-          <Visual title={caster.title}
-                  description={caster.description}
+          <Visual title={Caster.main.title}
+                  description={Caster.main.description}
                   downloadImg={downloadIcn}
-                  downloadCopy={caster.downloadCopy}
-                  downloadDescription={caster.downloadDescription}
+                  downloadCopy={Caster.main.downloadCopy}
+                  downloadDescription={Caster.main.downloadDescription}
                   visualImg={visualImg}
           />
           <TabMenu/>
           <Contents type={'left'}
-                    subject={caster.comeTogether.subject}
-                    title={caster.comeTogether.title}
-                    description={caster.comeTogether.description}
+                    subject={Caster.comeTogether.subject}
+                    title={Caster.comeTogether.title}
+                    description={Caster.comeTogether.description}
                     contentImg={''}
           />
           <Contents type={'right'}
-                    subject={caster.easyPeasy.subject}
-                    title={caster.easyPeasy.title}
-                    description={caster.easyPeasy.description}
+                    subject={Caster.easyPeasy.subject}
+                    title={Caster.easyPeasy.title}
+                    description={Caster.easyPeasy.description}
                     contentImg={''}
           />
           <Contents type={'left'}
-                    subject={caster.betterExperience.subject}
-                    title={caster.betterExperience.title}
-                    description={caster.betterExperience.description}
+                    subject={Caster.betterExperience.subject}
+                    title={Caster.betterExperience.title}
+                    description={Caster.betterExperience.description}
                     contentImg={''}
           />
       </Container>

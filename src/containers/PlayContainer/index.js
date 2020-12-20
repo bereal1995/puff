@@ -5,6 +5,7 @@ import TabMenu from "../../components/Main/TabMenu";
 import {useSelector} from "react-redux";
 import downloadIcn from '../../images/icon/downloadIcn.png';
 import visualImg from '../../images/Main/visual.jpg'
+import {Play} from "../../CopyRight/Play/Copy";
 
 function PlayContainer(props) {
 
@@ -16,11 +17,11 @@ function PlayContainer(props) {
 
   return (
       <Container>
-          <Visual title={play.title}
-                  description={play.description}
+          <Visual title={Play.main.title}
+                  description={Play.main.description}
                   downloadImg={downloadIcn}
-                  downloadCopy={play.downloadCopy}
-                  downloadDescription={play.downloadDescription}
+                  downloadCopy={Play.main.downloadCopy}
+                  downloadDescription={Play.main.downloadDescription}
                   visualImg={visualImg}
           />
           <TabMenu/>
