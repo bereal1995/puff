@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {ColorBox} from "../../lib/Styled";
 import cn from "classnames";
 import {withRouter} from "react-router-dom";
+import {navigate} from "../../lib/History";
 
 function Carousel(props) {
 
@@ -13,21 +14,30 @@ function Carousel(props) {
   return (
       <Container>
         <ul>
-            <li className={cn({isActive: location.pathname === '/'})}><Item caster/></li>
-            <li><Item play/></li>
-            <li><Item/></li>
+            <li className={cn({isActive: location.pathname === '/'})}
+                onClick={() => navigate('/')}
+            ><Item caster/></li>
+            <li className={cn({isActive: location.pathname === '/play'})}
+                onClick={() => navigate('/play')}
+            ><Item play/></li>
+            <li className={cn({isActive: location.pathname === '/cam'})}
+                onClick={() => navigate('/cam')}
+            ><Item/></li>
         </ul>
       </Container>
   )
 }
 const Container = styled.div`
-  width: 55px;
-  height: 24px;
-  margin: 40px auto 30px;
+  display:flex;
+  justify-content: center;
+  padding: 40px 0 30px;
+  z-index: 1;
   ul{
     display:flex;
     justify-content: center;
     align-items: center;
+    width: 55px;
+    height: 24px;
     padding: 4px;
     background: #000;
     border-radius: 12px;

@@ -6,6 +6,9 @@ import topIcnFacebook from '../../images/icon/topIcnFacebook.png'
 import topIcnTwitch from '../../images/icon/topIcnTwitch.png'
 import topIcnYoutube from '../../images/icon/topIcnYoutube.png'
 import Carousel from "./Carousel";
+import mainBgParttern1 from "../../images/Main/mainBgParttern1.png";
+import mainBgParttern2 from "../../images/Main/mainBgParttern2.png";
+import {DownloadButtonContainer} from "../Button/Button.Styled";
 
 
 function Visual(props) {
@@ -22,32 +25,49 @@ function Visual(props) {
   return (
       <>
           <Container>
-              <VisualText>
-                  <h2>{title}</h2>
-                  <p>{description}</p>
-                  <DownloadContainer>
-                      <DownloadButton><img src={downloadImg} alt="다운로드 버튼"/>{downloadCopy}</DownloadButton>
-                      <span>{downloadDescription}</span>
-                  </DownloadContainer>
-                  <SnsContainer>
-                      <h3>연동 플랫폼</h3>
-                      <ul>
-                          <li><img src={topIcnYoutube} alt="유튜브 아이콘"/></li>
-                          <li><img src={topIcnTwitch} alt="트위치 아이콘"/></li>
-                          <li><img src={topIcnFacebook} alt="페이스북 아이콘"/></li>
-                      </ul>
-                  </SnsContainer>
-              </VisualText>
-              <VisualImage>
-                  <img src={visualImg} alt="어플 실행화면"/>
-              </VisualImage>
-
+              <ContainerBg>
+                  <VisualContainer>
+                      <VisualText>
+                          <h2>{title}</h2>
+                          <p>{description}</p>
+                          <DownloadContainer>
+                              <DownloadButton><img src={downloadImg} alt="다운로드 버튼"/>{downloadCopy}</DownloadButton>
+                              <span>{downloadDescription}</span>
+                          </DownloadContainer>
+                          <SnsContainer>
+                              <h3>연동 플랫폼</h3>
+                              <ul>
+                                  <li><img src={topIcnYoutube} alt="유튜브 아이콘"/></li>
+                                  <li><img src={topIcnTwitch} alt="트위치 아이콘"/></li>
+                                  <li><img src={topIcnFacebook} alt="페이스북 아이콘"/></li>
+                              </ul>
+                          </SnsContainer>
+                      </VisualText>
+                      <VisualImage>
+                          <img src={visualImg} alt="어플 실행화면"/>
+                      </VisualImage>
+                  </VisualContainer>
+                  <Carousel/>
+              </ContainerBg>
           </Container>
-          <Carousel/>
-    </>
+      </>
   )
 }
+
+
 const Container = styled.div`
+  background-color: #151a1d;
+  color: #fff;
+`;
+
+const ContainerBg = styled.div`
+  margin: 0 ${pxToRem(60)};
+  background-image: url(${mainBgParttern1}), url(${mainBgParttern2});
+  background-repeat: no-repeat;
+  background-position: left ${pxToRem(72)}, right top;
+`;
+
+const VisualContainer = styled.div`
   display:flex;
   justify-content: space-between;
   width: ${pxToRem(1140)};
@@ -68,23 +88,13 @@ const VisualText = styled.div`
   }
 `;
 
-const DownloadContainer = styled.div`
+const DownloadContainer = styled(DownloadButtonContainer)`
   margin-top: ${pxToRem(96)};
-  span{
-    display:block;
-    color: #777;
-    font-size: 14px;
-    line-height: 1;
-    margin-top: 10px;
-  }
 `;
 
 const DownloadButton = styled(ButtonTopaz)`
   width: ${pxToRem(246)};
   height: ${pxToRem(60)};  
-  img{
-    margin-right: 8px;
-  }
 `;
 
 const VisualImage = styled.div`

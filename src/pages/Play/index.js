@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import HomeContainer from "../../containers/MainContainer";
+import PlayContainer from "../../containers/PlayContainer";
 
-function index(props) {
+function Play(props) {
 
     const {
 
@@ -10,7 +10,7 @@ function index(props) {
 
   return (
       <Container>
-          <MainContainer/>
+          <PlayContainer/>
       </Container>
   )
 }
@@ -19,4 +19,4 @@ const Container = styled.div`
 `;
 
 
-export default index;
+export default Play;

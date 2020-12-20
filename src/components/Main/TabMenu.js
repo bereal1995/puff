@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {ColorBox, pxToRem} from "../../lib/Styled";
 import cn from 'classnames'
 import {withRouter} from "react-router-dom";
+import {navigate} from "../../lib/History";
 
 function TabMenu(props) {
 
@@ -13,15 +14,21 @@ function TabMenu(props) {
   return (
       <Container>
           <ul>
-              <li className={cn({isActive: location.pathname === '/'})}>
+              <li className={cn({isActive: location.pathname === '/'})}
+                  onClick={() => navigate('/')}
+              >
                   <Box caster/>
                   <p>퍼프 캐스터</p>
               </li>
-              <li>
+              <li className={cn({isActive: location.pathname === '/play'})}
+                  onClick={() => navigate('/play')}
+              >
                   <Box play/>
                   <p>퍼프 채팅창</p>
               </li>
-              <li>
+              <li className={cn({isActive: location.pathname === '/cam'})}
+                  onClick={() => navigate('/cam')}
+              >
                   <Box/>
                   <p>퍼프 캠</p>
               </li>
@@ -31,6 +38,7 @@ function TabMenu(props) {
 }
 const Container = styled.div`
   height: ${pxToRem(80)};
+  color: #fff;
   background: #1b2227;
   ul{
     display:flex;

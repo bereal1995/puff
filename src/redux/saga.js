@@ -1,11 +1,15 @@
 import {all} from 'redux-saga/effects'
 import appSaga from './app/saga';
-import mainSaga from './main/saga';
+import casterSaga from './caster/saga';
+import playSaga from './play/saga';
+import camSaga from './cam/saga';
 
 function* sagas() {
     yield all([
         appSaga(),
-        mainSaga(),
+        casterSaga(),
+        playSaga(),
+        camSaga(),
     ])
 }
 

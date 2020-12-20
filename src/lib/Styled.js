@@ -1,4 +1,4 @@
-import styled,{createGlobalStyle} from "styled-components";
+import styled,{createGlobalStyle, css} from "styled-components";
 
 export const pxToRem = (value) => value / 16 + 'rem';
 
@@ -19,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
-    color: #fff;
   }
   img {
     max-width: 100%;
@@ -39,7 +38,7 @@ export const GreenYellow = '#cdee0a';
 export const ColorBox = styled.div`
   background: ${props => {
     if (props.caster) {
-        return `#14cac1;`
+        return Topaz
     } else if (props.play) {
         return `#ddb418;`
     } else {
@@ -47,3 +46,5 @@ export const ColorBox = styled.div`
     }
   }};
 `;
+
+export const Topaz = '#14cac1';
