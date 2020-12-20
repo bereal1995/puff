@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {useSelector} from "react-redux";
 import Routes from "./Routes";
 import Spinner from "./components/Spinner";
-import HeaderContainer from "./containers/HeaderContainer";
 import {GlobalStyle} from "./lib/Styled";
+import Header from "./components/Header";
 
 
 
@@ -17,14 +17,15 @@ function App() {
       <Container>
 
         <GlobalStyle/>
-        <HeaderContainer/>
+        <Header/>
         <Routes/>
         <Spinner isLoading={app.isLoading}/>
       </Container>
   )
 }
 const Container = styled.div`
-
+  width: 1440px;
+  margin: 0 auto;
 `;
 
 

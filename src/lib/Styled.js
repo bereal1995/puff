@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import styled,{createGlobalStyle} from "styled-components";
 
 export const pxToRem = (value) => value / 16 + 'rem';
 
@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+    color: #fff;
   }
   img {
     max-width: 100%;
@@ -28,15 +29,21 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${setHtmlVw()};
   }
   
-  .button_bar{
-    display: inline-block;
-    width: 1px;
-    height: 32px;
-    position: relative;
-    background: #d1d1d1;
-  }
-  
   ::-webkit-scrollbar {
     display: none;
   }
+`;
+
+export const GreenYellow = '#cdee0a';
+
+export const ColorBox = styled.div`
+  background: ${props => {
+    if (props.caster) {
+        return `#14cac1;`
+    } else if (props.play) {
+        return `#ddb418;`
+    } else {
+        return `#7167ff;`
+    }
+  }};
 `;

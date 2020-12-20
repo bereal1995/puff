@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import Visual from "./Visual";
-import Photo from "./Photo";
+import HomeContainer from "../../containers/MainContainer";
 
 function index(props) {
 
@@ -11,8 +10,7 @@ function index(props) {
 
   return (
       <Container>
-          <Visual/>
-          <Photo/>
+          <MainContainer/>
       </Container>
   )
 }
