@@ -48,3 +48,17 @@ export const ColorBox = styled.div`
 `;
 
 export const Topaz = '#14cac1';
+
+export const ArrowCss = styled.span`
+    content:"";
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width:10px;
+    height:10px;
+    margin-left: 10px;
+    border-top:2px solid #fff;
+    border-right:2px solid #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+`;

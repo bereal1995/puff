@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import Visual from "../../components/Main/Visual";
-import TabMenu from "../../components/Main/TabMenu";
+import Index from "../../components/Visual";
+import TabMenu from "../../components/TabMenu";
 import {useSelector} from "react-redux";
 import downloadIcn from '../../images/icon/downloadIcn.png';
 import visualImg from '../../images/Main/visual.jpg'
@@ -18,12 +18,12 @@ function CamContainer(props) {
 
     return (
       <Container>
-          <Visual title={Cam.main.title}
-                  description={Cam.main.description}
-                  downloadImg={downloadIcn}
-                  downloadCopy={Cam.main.downloadCopy}
-                  downloadDescription={Cam.main.downloadDescription}
-                  visualImg={visualImg}
+          <Index title={Cam.main.title}
+                 description={Cam.main.description}
+                 downloadImg={downloadIcn}
+                 downloadCopy={Cam.main.downloadCopy}
+                 downloadDescription={Cam.main.downloadDescription}
+                 visualImg={visualImg}
           />
           <TabMenu/>
       </Container>

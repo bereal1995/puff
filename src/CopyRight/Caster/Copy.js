@@ -20,4 +20,8 @@ export const Caster = {
         title: '새로운 경험을 시청자에게 전달',
         description: '퍼프 플레이는 스트리머와 시청자에게 새로운 경험을 전달합니다. 다양한 형식의 퍼프 플레이를 통해 새로운 경험을 라이브 할 수 있습니다. '
     },
+    Download: {
+        copy: '지금 바로 당신의 라이브를 시작해보세요!',
+        updateNotice: 'PUFF CASTER의 새로운 버전이 업데이트 되었습니다!',
+    }
 }

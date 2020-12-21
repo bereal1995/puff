@@ -5,6 +5,7 @@ import Routes from "./Routes";
 import Spinner from "./components/Spinner";
 import {GlobalStyle} from "./lib/Styled";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Header/>
         <Routes/>
         <Spinner isLoading={app.isLoading}/>
+        <Footer/>
       </Container>
   )
 }

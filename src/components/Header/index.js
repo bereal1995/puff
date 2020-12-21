@@ -4,6 +4,7 @@ import Gnb from "./Gnb";
 import Logo from "./Logo";
 import {navigate} from "../../lib/History";
 import {pxToRem} from "../../lib/Styled";
+import {CommonCopy} from "../../CopyRight/Common/Common";
 
 function Header(props) {
 
@@ -14,7 +15,11 @@ function Header(props) {
   return (
       <Container>
           <Logo onClick={() => navigate('/')}/>
-          <Gnb/>
+          <Gnb product={CommonCopy.header.product}
+               premium={CommonCopy.header.premium}
+               more={CommonCopy.header.more}
+               login={CommonCopy.header.login}
+          />
       </Container>
   )
 }

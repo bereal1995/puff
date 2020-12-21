@@ -1,20 +1,24 @@
 import React from 'react';
 import styled from "styled-components";
-import {GreenYellow, pxToRem} from "../../lib/Styled";
+import {ArrowCss, GreenYellow, pxToRem} from "../../lib/Styled";
 
 function Gnb(props) {
 
     const {
+        product,
+        premium,
+        more,
+        login,
     } = props;
 
   return (
       <Container>
           <GnbMenu>
-              <li>제품<Arrow/></li>
-              <li>프리미엄</li>
-              <li>더 알아보기</li>
+              <li>{product}<Arrow/></li>
+              <li>{premium}</li>
+              <li>{more}</li>
           </GnbMenu>
-          <Button>로그인</Button>
+          <Button>{login}</Button>
       </Container>
   )
 }
@@ -32,6 +36,7 @@ const GnbMenu = styled.div`
     font-size: ${pxToRem(14)};
     opacity: .6;
     cursor: pointer;
+    color:#fff;
   }
   li:hover, li:active {
     opacity: 1;
@@ -54,18 +59,8 @@ const Button = styled.div`
     }
 `;
 
-const Arrow = styled.span`
-    content:"";
-    display: inline-block;
-    position: relative;
-    top: -2px;
-    width:10px;
-    height:10px;
-    margin-left: 10px;
-    border-top:2px solid #fff;
-    border-right:2px solid #fff;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+const Arrow = styled(ArrowCss)`
+    
 `;
 
 export default Gnb;

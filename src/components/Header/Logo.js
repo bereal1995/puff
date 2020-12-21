@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {pxToRem} from "../../lib/Styled";
 
 function Logo(props) {
 
@@ -14,13 +15,13 @@ function Logo(props) {
   )
 }
 const Container = styled.div`
+  margin-right: ${pxToRem(40)};
   h1{
     color: #fff;
     font-family: NotoSansCJKkr;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 14px;
   }
-  cursor: pointer;
 `;
 
 
